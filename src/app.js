@@ -9,7 +9,7 @@ const fetchAdvice = (() => {
     advice_dice.classList.add('give-advice');
     advice_dice.classList.add('rotate-anim');
     advice_block.classList.remove('fadeIn');
-
+    advice_dice.style.pointerEvents = 'none';
     advice_block.classList.add('fadeOut');
     setTimeout(() => {
         fetch("https://api.adviceslip.com/advice")
@@ -21,6 +21,7 @@ const fetchAdvice = (() => {
                 advice_block.classList.add('fadeIn');
                 advice_dice.classList.add('rotate-anim-back')
                 advice_dice.classList.remove('give-advice');
+                advice_dice.style.pointerEvents = 'auto';
             }).catch(() => {
                 advice_block.classList.remove('fadeOut');
                 advice_block.classList.add('fadeIn');
@@ -28,6 +29,7 @@ const fetchAdvice = (() => {
                 advice_text.innerText = 'Error. Please try again.';
                 advice_dice.classList.add('rotate-anim-back')
                 advice_dice.classList.remove('give-advice');
+                advice_dice.style.pointerEvents = 'auto';
             })
     }, 1500)
 })
