@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Standarad meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Building Advice Generator App from Frontend Mentor challenge...">
+    <meta name="keywords" content="HTML, CSS, TailwindCSS, JavaScript, FrontendMentor">
+    <meta name="author" content="Marko Dumnic">
+
+    <!-- OG meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Advice Generator App" />
+    <meta property="og:description" content="Building Advice Generator App from Frontend Mentor challenge..." />
+    <meta property="og:url" content="https://dumaaas.github.io/advice-generator-app/" />
+    <meta property="og:image" content="https://dumaaas.github.io/qr-code-component/images/qr-code.png" />
+
+    <!-- Twitter meta tags-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@dumaDev" />
+    <meta name="twitter:title" content="Advice Generator App" />
+    <meta name="twitter:description" content="Building Advice Generator App from Frontend Mentor challenge..." />
+    <meta name="twitter:image" content="https://dumaaas.github.io/qr-code-component/images/qr-code.png" />
+
+    <!-- Favicon and Title -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <title>FrontendMentor | Advice Generator App</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+
+<body>
+    <main class="bg-dark-blue w-screen h-screen flex items-center justify-center">
+        <div
+            class="duration-500 mx-[20px] relative rounded-[16px] gap-[20px] bg-dark-grayish-blue p-[40px] max-w-[531px] flex flex-col items-center text-center justify-center">
+            <div id="advice_block">
+                <h1 id="advice_id" class="pb-[20px] uppercase text-neon-green text-[14px] tracking-[4px]">
+                    Advice
+                </h1>
+                <p id="advice_text" class="text-[28px] text-light-cyan">
+                    Roll the dice to get your device
+                </p>
+            </div>
+            <img class="pt-[15px] pb-[30px]" src="./images/pattern-divider-desktop.svg" alt="divider" />
+            <div id="advice_dice" onclick="fetchAdvice()"
+                class="transition-all ease-out duration-500 rotate-0 hover:shadow-[0_0_10px_5px_rgb(82,255,168,0.4)] cursor-pointer absolute bottom-0 left-[50%] transform translate-x-[-50%] translate-y-[50%] flex items-center justify-center bg-neon-green rounded-full p-[17px]">
+                <img src="./images/icon-dice.svg" alt="dice" />
+            </div>
+        </div>
+    </main>
+</body>
+
+<!-- Scripts -->
+<script src="./src/app.js"></script>
+
+</html>
